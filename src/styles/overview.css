@@ -1,3 +1,4 @@
+/* Project list grid layout */
 .overview {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -7,30 +8,27 @@
   min-height: 100vh;
 }
 
+/* Project list titles */
 .overview h1 {
   grid-column: 1 / span 8;
   grid-row: 1;
   place-self: center;
   font-size: 4vw;
 }
-
 .overview h2 {
     font-size: 3vw;
 }
-
 #full-stack {
   grid-column: 1 / span 4;
   grid-row: 2;
   color: #4c5bdb;
 }
-
 #hacks {
   grid-column: 1 / span 4;
   grid-row: 4;
   color: rgb(146, 94, 198);
   padding-top: 20px;
 }
-
 #experiments {
   grid-column: 1 / span 4;
   grid-row: 6;
@@ -38,6 +36,7 @@
   padding-top: 20px;
 }
 
+/* Project cards layout */
 .minicards {
   grid-column: 1 / span 4;
   grid-row: 7;
@@ -45,7 +44,7 @@
 
 /* Responsiveness */
 @media only screen and (max-width: 768px) {
-  /* For mobile phones: */
+  /* For mobile phones: stack grid layout */
   .overview {
     grid-template-columns: 100%;
     grid-template-rows: auto repeat(2, auto 1fr 1fr 1fr 1fr) auto auto;

@@ -1,44 +1,29 @@
-import React, { useRef, useEffect } from 'react'
-import anime from "animejs"
+import React from 'react';
 // Styling
-import '../styles/overview.css'
+import '../styles/overview.css';
 // Resources
-import clicknotes from '../resources/clicknotes.png'
-import cas from '../resources/cas.png'
-import boxedin from '../resources/boxedin.png'
-import gradder from '../resources/gradder.jpg'
-import tempad from '../resources/tempad.png'
-import playlist from '../resources/playlist.png'
-import food from '../resources/food.png'
-import coronaware from '../resources/coronaware.png'
+import clicknotes from '../resources/clicknotes.png';
+import cas from '../resources/cas.png';
+import boxedin from '../resources/boxedin.png';
+import gradder from '../resources/gradder.jpg';
+import tempad from '../resources/tempad.png';
+import playlist from '../resources/playlist.png';
+import food from '../resources/food.png';
+import coronaware from '../resources/coronaware.png';
 // Components
-import Card from '../components/Card'
-import Minicard from '../components/Minicard'
+import Card from '../components/Card';
+import Minicard from '../components/Minicard';
 
 export default function Overview() {
 
-    const cardGridRef = useRef(null);
-
-    // Animation parameters
-    useEffect(() => {
-        /* cardGridRef.current = anime({
-            targets: ".card",
-            translateY: [
-                { value: -10, easing: 'easeOutSine', duration: 500 },
-                { value: 0, easing: 'easeInOutQuad', duration: 1200 }
-            ],
-            delay: anime.stagger(200, { grid: [4, 2], from: 'center' }),
-            loop: true,
-            direction: 'alternate',
-            endDelay: 1400
-        }); */
-
-    }, []);
-
     return (
         <div className="overview">
-            <h1 data-aos="fade-in" data-aos-duration="5000">Check out what I've been working on.</h1>
-            <h2 data-aos="fade-right" id="full-stack">Fully developed web platforms</h2>
+            <h1 data-aos="fade-in" data-aos-duration="5000">
+                Check out what I've been working on.
+            </h1>
+            <h2 data-aos="fade-right" id="full-stack">
+                Fully developed web platforms
+            </h2>
             <Card no={[3, 1]}
                 img={clicknotes}
                 title={"IB Click Notes"}
@@ -63,7 +48,9 @@ export default function Overview() {
                 desc={"An affordable school management system. Worked as a front-end developer intern to implement the user interface."}
                 url={"https://github.com/Gradder-Official/gradder_main"}
             />
-            <h2 id="hacks" data-aos="fade-right">Hackathon projects</h2>
+            <h2 id="hacks" data-aos="fade-right">
+                Hackathon projects
+            </h2>
             <Card no={[5, 1]}
                 img={tempad}
                 title={"TemPad Timeline"}
@@ -88,7 +75,9 @@ export default function Overview() {
                 desc={"A Covid-19 game to raise awareness about infection prevention."}
                 url={"https://replit.com/talk/share/CORONAWARE-CODE-JAM-9/31316"}
             />
-            <h2 id="experiments" data-aos="fade-right">Other experiments</h2>
+            <h2 id="experiments" data-aos="fade-right">
+                Other experiments
+            </h2>
             <div className="minicards">
                 <Minicard
                     title={"Hand gesture recognition"}

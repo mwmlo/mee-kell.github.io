@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 // Styling
-import '../styles/components.css'
+import '../styles/components.css';
 
 export default function Minicard(props) {
     return (
